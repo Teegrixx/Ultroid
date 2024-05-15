@@ -546,7 +546,7 @@ def telegraph_client():
 
     token = udB.get_key("_TELEGRAPH_TOKEN")
     TELEGRAPH_DOMAIN = udB.get_key("GRAPH_DOMAIN")
-    TelegraphClient = Telegraph(token)
+    TelegraphClient = Telegraph(token, domain="graph.org")
     if token:
         TELEGRAPH.append(TelegraphClient)
         return TelegraphClient
